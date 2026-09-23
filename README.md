@@ -1,9 +1,18 @@
 # WRO Future Engineers 2026 — US Open
+Autonomous self-driving vehicle engineering repository for the World Robot Olympiad Future Engineers category.
+- Team: Bianca Polato & Samira Santos 
+- Coach: Julian Vigil School: Howard Academy (Panama) 
+- Event: WRO Future Engineers — US Open 2026
+---
 
 ## Table of Contents
 1. Team Introduction
 2. The Challenge
 3. Repository Structure
+4. Mechanical Design
+5. Electronics & Power Distribution
+6. Software & Navigation Logic
+
 
 ## Team Introduction
 Our team is composed of two members, working under the guidance of our coach, Julian Vigil.
@@ -12,8 +21,6 @@ Our team is composed of two members, working under the guidance of our coach, Ju
 - Samira Santos — Software Lead & Electronics Planning: Responsible for programming the robot's control logic and computer vision, as well as planning the electronics architecture that Bianca implements physically.
 
 This is our third year competing in WRO Future Engineers, and our first time qualifying for the Open. This program has always been, for us, about the process of learning: refining engineering reasoning, testing rigorously, and improving through iteration, rather than solely about the outcome of winning
-
-[figure out how to put an image of us]
 
 ## The Challenge
 WRO Future Engineers challenges teams to design, build, and program a fully autonomous vehicle capable of navigating a reconfigurable race track without any human intervention or remote control once a round begins. The competition includes:
@@ -143,7 +150,7 @@ The Obstacle Challenge round (`non_free_round()`) uses the same corner-turning l
 2. **Validate:** The Arduino recalculates the XOR checksum. If it doesn't match, or if fewer than 18 bytes arrive, the packet is discarded for that cycle and an error is printed to the serial monitor. This prevents corrupted data from causing bad steering decisions.
 3. **Corners:** If the front sensor reads less than 600 mm, the robot treats this as approaching a corner and hands off to `turn()`.
 4. **Vision flags:** The robot then checks each flag in the packet independently:
- - **Red pillar:** The official WRO rule requires red pillars to be passed on their right side. The position (red_cx) and distance are available for steering.
-  - **Green pillar:** The official WRO rule requires green pillars to be passed on their left side. The position (green_cx) and distance are available for steering.
-  - **Parking slot:** Its position is available for aligning the parking maneuver.
-  - **Crosswalk:** The required action depends on the WRO surprise rule, which has not been officially revealed yet. The robot only logs the detection for now.
+     - **Red pillar:** The official WRO rule requires red pillars to be passed on their right side. The position (`red_cx`) and distance are available for steering.
+      - **Green pillar:** The official WRO rule requires green pillars to be passed on their left side. The position (`green_cx`) and distance are available for steering.
+      - **Parking slot:** Its position is available for aligning the parking maneuver.
+      - **Crosswalk:** The required action depends on the WRO surprise rule, which has not been officially revealed yet. The robot only logs the detection for now.
