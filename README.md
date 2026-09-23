@@ -135,8 +135,9 @@ The code already contains two parking routines built on the distance-based movem
 - `move_in()` parks the robot at the end of the round. It drives past the slot, reverses into it at an angle, straightens while reversing, and makes a final forward adjustment.
 Both routines are currently "blind": they follow fixed timed sequences and do not yet use the camera's parking_cx data. They are also not called from the main loop yet. The point where the 12th corner is completed in non_free_round() is marked as the entry point for parking.
 
-##Object Avoidance Logic
+## Object Avoidance Logic
 The Obstacle Challenge round (`non_free_round()`) uses the same corner-turning logic as the Open Challenge, and adds data from the NICLA Vision module.
+
 **How it works**
 1. **Request data:** On each control cycle (about every 150 ms), the Arduino requests the 18-byte packet from the NICLA at I2C address 8.
 2. **Validate:** The Arduino recalculates the XOR checksum. If it doesn't match, or if fewer than 18 bytes arrive, the packet is discarded for that cycle and an error is printed to the serial monitor. This prevents corrupted data from causing bad steering decisions.
