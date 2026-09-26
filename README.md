@@ -17,8 +17,8 @@ Autonomous self-driving vehicle engineering repository for the World Robot Olymp
 ## Team Introduction
 Our team is composed of two members, working under the guidance of our coach, Julian Vigil.
 
-- Bianca Polato: Team Captain & Mechanical Lead: Responsible for the physical build of the robot, including chassis assembly, mechanical integration, and hands-on electronics work such as soldering and wiring connections.
-- Samira Santos: Software Lead & Electronics Planning: Responsible for programming the robot's control logic and computer vision, as well as planning the electronics architecture that Bianca implements physically.
+- Bianca Polato - Team Captain & Mechanical Lead: Responsible for the physical build of the robot, including chassis assembly, mechanical integration, and hands-on electronics work such as soldering and wiring connections.
+- Samira Santos: - Software Lead & Electronics Planning: Responsible for programming the robot's control logic and computer vision, as well as planning the electronics architecture that Bianca implements physically.
 
 This is our third year competing in WRO Future Engineers, and our first time qualifying for the Open. This program has always been, for us, about the process of learning: refining engineering reasoning, testing rigorously, and improving through iteration, rather than solely about the outcome of winning
 
